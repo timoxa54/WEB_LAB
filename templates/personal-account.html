@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/personal-account.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <main>
+        <div class="personal-account-container">
+            <h2>Личный кабинет</h2>
+            <p>Добро пожаловать, {{ user.name }}!</p>
+            <div class="account-details">
+                <h3>Детали аккаунта</h3>
+                <p>Имя: {{ user.name }}</p>
+                <p>Фамилия: {{ user.surname }}</p>
+                <p>Email: {{ user.email }}</p>
+            </div>
+            <div class="actions">
+            </div>
+        </div>
+    </main>
+    
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/script3.js') }}"></script>
+</body>
+</html>

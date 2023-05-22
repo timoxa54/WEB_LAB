@@ -1,0 +1,246 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  color: #2a2a2a;
+  font-size: 18px;
+  background-color: #ffffff;
+}
+.header .main {
+  background-color: #ffffff;
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  font-weight: 300;
+  font-family: gt-haptik,Arial,sans-serif;
+  text-decoration: none;
+}
+
+
+.header .main li {
+  display: inline-block;
+  line-height: 30px;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.header .main .rlinks {
+  flex: 1;
+  text-align: right;
+}
+.header .main .rlinks a{
+  display: flex;
+  border-radius: 25px;
+}
+.logo{
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #7297a9;
+  border-radius: 25px;
+}
+.logo a:hover{
+  background-color: #a3cee4;
+}
+.header .main .llinks {
+  flex: 1;
+  text-align: left;
+}
+.header .main .llinks a{
+  color:#000000;
+  border-radius: 25px;
+}
+.header a{
+  padding: 5px 15px;
+  text-decoration: none;
+  transition: ease-in-out 0.2s;
+}
+.llinks a:hover{
+  background-color: #a3cee4;
+}
+.rlinks a:hover{
+  background-color: #a3cee4;
+}
+
+
+
+
+
+
+
+
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  top: 15px;
+  left: 15px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 999;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.hamburger-menu{
+  display: flex;
+}
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 310px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  min-width: 120px;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+transition-duration: .25s;
+}
+.menu__box {
+transition-duration: .25s;
+}
+.menu__item {
+transition-duration: .25s;
+}
+
+
+
+.menu_info{
+  padding-top: 20px;
+  display: flex;
+  float: left;
+  margin: 10px 30px;
+}
+.menu_info p{
+  text-transform: uppercase;
+  line-height: 22px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  padding-left: 18px;
+}
+.menu_info ul{
+  list-style: none;
+}
+.menu_info li{
+  text-transform: uppercase;
+  line-height: 17px;
+  padding: 6px 10px 6px 16px;
+  border-bottom: 1px solid #efefef;
+  transition: ease-out 0.2s;
+}
+.menu_info li:hover{
+  color: #000;
+  background-color:#d8d8d8;
+}
+.menu_info a{
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: block;
+  color:#2a2a2a95;
+}
+
+
+.footer{
+  background-color: #e8e8e8;
+}
+.body_box{
+  display: flex;
+  margin-left: 45px;
+  margin-right: 45px;
+  padding: 30px;
+}
+.newslatter{
+  width: 49%;
+}
+.footer .title{
+  font-weight: bold;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+.footer .email {
+  border: 0;
+  border-bottom: 1px solid #000;
+  background: none;
+  font-size: 19px;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  outline: 0;
+}
+
+.support{
+  width: 51%;
+  margin-left: 150px;
+}
+.support .title{
+  font-weight: bold;
+  margin-bottom: 1p0x;
+  font-size: 18px;
+}
+.support .subtitle{
+  font-weight: bold;
+  margin-bottom: 1px;
+  font-size: 16px;
+}
